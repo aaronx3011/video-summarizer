@@ -1,0 +1,11 @@
+services:
+  clipnote:
+    build: .
+    ports:
+      - "3001:3001"
+    volumes:
+      - clipnote-data:/data
+    restart: unless-stopped
+
+volumes:
+  clipnote-data:
